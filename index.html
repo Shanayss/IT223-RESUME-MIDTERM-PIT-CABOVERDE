@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caboverde_Resume</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!--  TOP BAR -->
+<header class="topbar">
+    <button id="darkModeToggle">🌙</button>
+    <div class="topbar-right">
+        <a href="#" id="hireMeBtn">Hire Me!</a>
+        <a href="assets/resume.pdf" target="_blank" download> Download </a>
+    </div>
+</header>
+
+<!-- NAVIGATION SECTION -->
+<nav class="navbar">
+    <ul>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- POPUP SECTIONS -->
+ <div id="popup" class="popup">
+  <div class="popup-content">
+    <p id="popupMessage"></p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+<div id="hireMePopup" class="popup">
+  <div class="popup-content hire-popup">
+    <button class="close-button" onclick="closeHirePopup()">×</button>
+    <h2>Hire Me</h2>
+    <p>Tell me about your project and I’ll get back to you as soon as possible.</p>
+    <form id="hireMeForm">
+      <input type="text" id="hireName" placeholder="Your name" required>
+      <input type="email" id="hireEmail" placeholder="Your email" required>
+      <textarea id="hireProject" placeholder="Project details" required></textarea>
+      <button type="submit">Send message</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- CONTAINER -->
+<div class="container">
+    <!-- PROFILE SECTION -->
+    <section class="header" id="profile">
+        <img src="assets/resume_pic.jpg" alt="Profile photo of applicant">
+        <div class="header-text">
+            <h1>CHANICE CABOVERDE</h1>
+            <h3>WEB DEVELOPER</h3>
+            <p>
+                I am a passionate and detail-oriented web developer who enjoys creating clean, 
+                user-friendly, and responsive websites. I have experience in HTML, CSS, and JavaScript, 
+                and I am continuously improving my skills in UI/UX design and web development. I like solving 
+                problems and turning ideas into functional and visually appealing digital experiences. I am eager 
+                to learn new technologies and work on projects that help me grow as a developer.
+            </p>
+        </div>
+    </section>
+
+
+    <!--CONTENT SPLIT  -->
+    <div class="main-content">
+
+        <!-- LEFT SIDE -->
+        <aside class="left" id="contact">
+            <h2>Contact</h2>
+            <p>📍 Bayabas, Cagayan de Oro</p>
+            <p>📞 09222222222</p>
+            <p>📧 caboverde7@gmail.com</p>
+
+            <!-- Contact Form -->
+            <form class="contact-form">
+                 <input type="text" id="name" placeholder="Name" required>
+                 <input type="email" id="email" placeholder="Email" required>
+                 <textarea id="message" placeholder="Message" required></textarea>
+                 <button type="submit">Send</button>
+            </form>
+        </aside>
+
+        <!-- RIGHT SIDE -->
+        <section class="right">
+
+            <!-- EXPERIENCE SECTION -->
+            <div class="section" id="experience">
+                <h2>Work Experience</h2>
+                <h4>Frontend Developer</h4>
+                <p>Company Name | 2022 - Present</p>
+                <p>Developed responsive web pages and improved UI/UX design.</p>
+
+                <h4>Junior Developer</h4>
+                <p>Company Name | 2020 - 2022</p>
+                <p>Assisted in website development and debugging.</p>
+            </div>
+
+            <!-- EDUCATION SECTION -->
+            <div class="section" id="education">
+                <h2>Education</h2>
+                    <h4>Elementary</h4>
+                         <p>Don Mariano Canoy Colleges</p>
+                    <h4>Junior High</h4>
+                         <p>Don Mariano Canoy Colleges</p>
+                    <h4>Senior High</h4>
+                        <p>Lourdes Colleges</p>
+                    <h4>College</h4>
+                        <p>University Science and Technology of Southern Philippines</p>
+            </div>
+
+            <!-- SKILLS SECTION -->
+            <div class="section" id="skills">
+                 <h2>Skills</h2>
+                    <ul>
+                         <li>HTML & CSS</li>
+                         <li>Responsive Design</li>
+                         <li>JavaScript Basics</li>
+                         <li>UI/UX Principles</li>
+                    </ul>
+                    <div id="moreSkills" class="hidden">
+                         <ul>
+                              <li>Web animations</li>
+                              <li>Git & Version Control</li>
+                              <li>Web Performance Optimization</li>
+                              <li>Accessibility (WCAG)</li>
+                         </ul>
+                    </div>
+                    <button id="toggleSkillsBtn" class="section-toggle">View More</button>
+            </div>
+
+            <!-- PROJECTS SECTION: With toggle for more projects -->
+            <div class="section" id="projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li><strong>Portfolio Website</strong> – Personal responsive portfolio</li>
+                    <li><strong>Resume Builder</strong> – Web-based resume generator</li>
+                </ul>
+                <div id="moreProjects" class="hidden">
+                    <ul>
+                      <li><strong>E-commerce Platform</strong> – Online store with filters.</li>
+                      <li><strong>Task Manager App</strong> – Task tracking app.</li>
+                    </ul>
+                </div>
+                <button id="toggleProjectsBtn" class="section-toggle">View More</button>
+            </div>
+
+        </section>
+    </div>
+
+</div>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="js/script.js"></script>
+</body>
+</html>
